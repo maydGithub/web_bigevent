@@ -28,7 +28,7 @@ $(function() {
         e.preventDefault()
         $.post('http://api-breakingnews-web.itheima.net/api/reguser', {
                 username: $('#reg_username').val(),
-                password: $('#reg_password').val()
+                password: $('reg_password').val()
             },
             function(res) {
                 if (res.status !== 0) {
@@ -56,6 +56,10 @@ $(function() {
                 layer.msg('登陆成功')
                 localStorage.setItem('token', res.token)
                 location.href = '/index.html'
+
+
+
+
             }
         })
     })
